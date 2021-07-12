@@ -52,7 +52,7 @@ int LinkedBST::max(int &output) {
 
 // returns the minimum vaue from the BST
 int LinkedBST::min(int &output) {
-   if (root->leftChild == nullptr) {
+  if (root->leftChild == nullptr) {
     output = root->data.data;
     return output;
   }
@@ -65,7 +65,24 @@ int LinkedBST::min(int &output) {
 }
 
 // checks if the key exists or not
-bool LinkedBST::exists(int targetKey) { return true; }
+bool LinkedBST::exists(int targetKey) {
+  if (root->data.key == targetKey)
+    return true;
+
+  ArrayStack stack(totalNodes);
+  Node *temp = this->root;
+  while (temp != nullptr || !stack.isEmpty()) {
+    while (temp != nullptr) {
+      stack.push(temp);
+      temp = temp->leftChild;
+    }
+    temp = stack.pop();
+    if (temp->data.key == targetKey)
+      return true;
+    temp = temp->rightChild;
+  }
+  return false;
+}
 
 // BST traversal
 void LinkedBST::inorder() {
@@ -73,19 +90,11 @@ void LinkedBST::inorder() {
   Node *temp = this->root;
   while (temp != nullptr || !stack.isEmpty()) {
     while (temp != nullptr) {
-      try {
-        stack.push(temp);
-        temp = temp->leftChild;
-      } catch (std::string error) {
-        std::cout << error << std::endl;
-      }
+      stack.push(temp);
+      temp = temp->leftChild;
     }
-    try {
-      temp = stack.pop();
-      std::cout << temp->data.data << " ";
-      temp = temp->rightChild;
-    } catch (std::string error) {
-      std::cout << error << std::endl;
-    }
+    temp = stack.pop();
+    std::cout << temp->data.data << " ";
+    temp = temp->rightChild;
   }
 }

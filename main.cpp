@@ -21,4 +21,6 @@ int main() {
   min = lBST.min(min);
   // std::cout << "\n";
   std::cout << "The min value in BST is: " << min << std::endl;
+  std::cout << "Searching for key 1 (exists = 1, doesn't exist = 0): " << lBST.exists(1) << std::endl;
+
 }
