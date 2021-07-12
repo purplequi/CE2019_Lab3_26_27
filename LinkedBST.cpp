@@ -17,7 +17,7 @@ void LinkedBST::add(int key, int value) {
       root = newNode;
       break;
     } else {
-      if (temp->data.data > value) {
+      if (temp->data.data >= value) {
         if (!temp->leftChild) {
           temp->leftChild = newNode;
           break;
@@ -37,10 +37,32 @@ void LinkedBST::add(int key, int value) {
 }
 
 // retruns the maximum vaue from the BST
-int LinkedBST::max(int &output) {}
+int LinkedBST::max(int &output) {
+  if (root->rightChild == nullptr) {
+    output = root->data.data;
+    return output;
+  }
+  Node *temp = root;
+  while (temp->rightChild != nullptr) {
+    temp = temp->rightChild;
+  }
+  output = temp->data.data;
+  return output;
+}
 
-// retruns the minimum vaue from the BST
-int LinkedBST::min(int &output) {}
+// returns the minimum vaue from the BST
+int LinkedBST::min(int &output) {
+   if (root->leftChild == nullptr) {
+    output = root->data.data;
+    return output;
+  }
+  Node *temp = root;
+  while (temp->leftChild != nullptr) {
+    temp = temp->leftChild;
+  }
+  output = temp->data.data;
+  return output;
+}
 
 // checks if the key exists or not
 bool LinkedBST::exists(int targetKey) { return true; }

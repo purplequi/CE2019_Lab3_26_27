@@ -13,4 +13,12 @@ int main() {
   lBST.add(7, 122);
   lBST.add(8, 49);
   lBST.inorder();
+  int max;
+  int min;
+  max = lBST.max(max);
+  std::cout << "\n";
+  std::cout << "The max value in BST is: " << max << std::endl;
+  min = lBST.min(min);
+  // std::cout << "\n";
+  std::cout << "The min value in BST is: " << min << std::endl;
 }
