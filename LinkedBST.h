@@ -18,6 +18,9 @@ public:
   // adds data to the BST
   virtual void add(int key, int value);
 
+  // deletes a node from the BST
+  void remove(int value);
+
   // retruns the maximum vaue from the BST
   virtual int max(int &output);
 
@@ -29,6 +32,9 @@ public:
 
   // BST traversal
   virtual void inorder();
+
+  // retruns the node with largest value in the given root
+  Node *maxInGivenRoot(Node *root);
 
   // destructor
   virtual ~LinkedBST() {}
