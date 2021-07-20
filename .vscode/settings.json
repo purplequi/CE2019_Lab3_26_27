@@ -1,5 +1,5 @@
 {
-    "files.associations": {
+
         "array": "cpp",
         "atomic": "cpp",
         "*.tcc": "cpp",
@@ -30,7 +30,7 @@
         "fstream": "cpp",
         "initializer_list": "cpp",
         "iosfwd": "cpp",
-        "iostream": "cpp",
+
         "istream": "cpp",
         "limits": "cpp",
         "new": "cpp",
