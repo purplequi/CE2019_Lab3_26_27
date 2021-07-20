@@ -1,4 +1,4 @@
-#include "Stack.h"
+#include "../include/Stack.h"
 #include <iostream>
 
 bool ArrayStack::isEmpty() { return topIndex < 0; }

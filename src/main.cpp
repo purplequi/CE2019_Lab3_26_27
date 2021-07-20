@@ -1,4 +1,4 @@
-#include "LinkedBST.h"
+#include "../include/LinkedBST.h"
 #include <iostream>
 
 int main() {

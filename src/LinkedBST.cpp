@@ -1,6 +1,5 @@
-#include "LinkedBST.h"
-#include "Stack.h"
-#include <bits/stdc++.h>
+#include "../include/LinkedBST.h"
+#include "../include/Stack.h"
 #include <iostream>
 
 // checks if the BST is empty
