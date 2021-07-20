@@ -39,7 +39,7 @@ void LinkedBST::add(int key, int value) {
         }
       }
     }
-    std::cout << value << " was added" << std::endl;
+    std::cout << "Data with key " << key << " was added" << std::endl;
   }
 }
 
@@ -115,7 +115,7 @@ void LinkedBST::inorder() {
       temp = temp->rightChild;
     }
   } else
-    throw std::string("Your BST is empty");
+    throw std::string("Cannot traverse, the BST is empty");
 }
 
 // deletes a node from the BST
@@ -184,10 +184,10 @@ void LinkedBST::remove(int value) {
     }
     // }
   } else {
-    throw std::string("Tree is empty");
+    throw std::string("Cannot remove, the BST is empty");
   }
   totalNodes--;
-  std::cout << value << " was removed from the BST" << std::endl;
+  std::cout << "The key " << value << " was removed from the BST" << std::endl;
 }
 
 Node *LinkedBST::maxInGivenRoot(Node *root) {
