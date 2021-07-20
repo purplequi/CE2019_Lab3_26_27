@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ArrayBST.h"
+#include "../include/ArrayBST.h"
 
 
 int main(){

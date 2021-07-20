@@ -1,6 +1,7 @@
 #include <iostream>
 
-#include "ArrayBST.h"
+#include "../include/ArrayBST.h"
+
 using namespace std;
 
 ArrayBST::ArrayBST(){
