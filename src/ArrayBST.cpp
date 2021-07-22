@@ -11,7 +11,12 @@ ArrayBST::ArrayBST(){
 	
 }
 
-bool isEmpty() { return true; }
+bool ArrayBST::isEmpty() {
+	if (element[-1]) 
+		return true;
+	else	
+		return false;
+ }
 
 // inserting data into the tree
 void ArrayBST::add(int key, int data){

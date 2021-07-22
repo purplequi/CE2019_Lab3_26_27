@@ -9,7 +9,7 @@ class ArrayBST : public AbstractBST {
 		int element[MAX_SIZE];
 	public:
 		ArrayBST();
-		~ArrayBST();
+		virtual ~ArrayBST();
 
 		bool isEmpty();
 		void add(int key, int value);
@@ -27,4 +27,7 @@ class ArrayBST : public AbstractBST {
 		int returnIndex(int key);
 		int minNode(int index);
 
+	
 };
+
+
