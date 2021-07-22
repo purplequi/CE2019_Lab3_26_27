@@ -11,9 +11,10 @@ ArrayBST::ArrayBST(){
 	
 }
 
+bool isEmpty() { return true; }
 
 // inserting data into the tree
-void ArrayBST::add(int data){
+void ArrayBST::add(int key, int data){
 	int i=0;
 	
 	while(true){
@@ -47,7 +48,7 @@ void ArrayBST::add(int data){
 
 
 //searching data
-bool ArrayBST::searchBST(int key){
+bool ArrayBST::exists(int key){
 	int i=0;
 	
 	while(true){
@@ -94,24 +95,23 @@ bool ArrayBST::searchBST(int key){
 		}
 	
 	}
-	
 
+void ArrayBST::inorder() { 
+	inorder(0); 
+}
 
 void ArrayBST::inorder(int i) {
-    if((i >= 0) && (element[i] != NULL)){
-    	
-      
-		inorder(getLeftChild(i));
-		cout << element[i]<<endl;
-        inorder(getRightChild(i));
-        
-        
-    }
+          if ((i >= 0) && (element[i] != NULL)) {
+
+            inorder(getLeftChild(i));
+            cout << element[i] << endl;
+            inorder(getRightChild(i));
+          }
 }
 
 
 
-int ArrayBST::min(){
+int ArrayBST::min(int &output){
 	int i=0;
 	while(element[getLeftChild(i)]!=NULL){
 	
@@ -119,18 +119,22 @@ int ArrayBST::min(){
 		
 
 	}
-		return (element[i]);	
+	 output = element[i];
+
+        return output;
 }
 
 
-int ArrayBST::max(){
+int ArrayBST::max(int &output){
 	int i=0;
 	while(element[getRightChild(i)]!=NULL){
 		i = 2*i+2;
 		
 
 	}
-		return (element[i]);	
+        output = element[i];
+
+        return output;	
 }
 
 int ArrayBST::returnIndex(int key){
@@ -164,9 +168,9 @@ int ArrayBST::minNode(int index){
     return element[index];
 }
 
-void ArrayBST::removeBST(int key){
+void ArrayBST::remove(int key){
 
-		if(ArrayBST::searchBST(key)==true){
+		if(ArrayBST::exists(key)==true){
 		int i = ArrayBST::returnIndex(key);
 		int leftChild = element[ArrayBST::getLeftChild(i)];
 		int rightChild = element[ArrayBST::getRightChild(i)];
@@ -199,7 +203,7 @@ void ArrayBST::removeBST(int key){
 		else 
 			return;
 	}
-		else if(ArrayBST::searchBST(key)==false)
+		else if(ArrayBST::exists(key)==false)
 		cout<<"BST doesnt contain "<< key <<" . "<<endl;
 }
 

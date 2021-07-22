@@ -1,7 +1,39 @@
+// #include "../include/ArrayBST.h"
 #include "../include/LinkedBST.h"
 #include <iostream>
 
 int main() {
+//   std::cout << "#-Array BST-#" << std::endl;
+//   ArrayBST a;
+//   a.add(5, 20);
+//   a.add(2, 45);
+//   a.add(3, 78);
+//   a.add(8, 11);
+//   a.add(7, 54);
+//   a.add(1, 88);
+
+//   a.add(16, 64);
+
+//   a.exists(7);
+
+//   std::cout << "Inorder Traversal:" << std::endl;
+//   a.inorder(0);
+//   int arrmin;
+//   int arrmax;
+//   std::cout << "Min element: " << a.min(arrmin) << std::endl;
+//   std::cout << "Max element: " << a.max(arrmax) << std::endl;
+
+//   a.remove(8);
+//   a.remove(5);
+
+//   std::cout << "Inorder Traversal:" << std::endl;
+//   a.inorder(0);
+//   std::cout << "#-Array BST-#" << std::endl;
+//   std::cout << "\n\n";
+
+
+
+  std::cout << "#-Linked BST-#" << std::endl;
   LinkedBST lBST;
   std::cout << "\n";
   std::cout << "Checking if the BST is empty (empty = 1, isn't empty = 0): "
@@ -54,4 +86,5 @@ int main() {
   } catch (std::string e) {
     std::cout << e << std::endl;
   }
+  std::cout << "#-Linked BST-#" << std::endl;
 }

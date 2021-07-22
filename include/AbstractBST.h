@@ -20,6 +20,9 @@ public:
 
   // BST traversal
   virtual void inorder() = 0;
+
+  // removes data from the BST
+  void remove(int key);
 };
 
 #endif // AbstractBST_h

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "AbstactBST.h"
+#include "AbstractBST.h"
 #include "Node.h"
 
-class LinkedBST {
+class LinkedBST : public AbstractBST{
 
 public:
   Node *root;
